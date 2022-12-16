@@ -27,7 +27,7 @@ public class C03_Json_Obje {
         JSONObject innerJson = new JSONObject();
 
         innerJson.put("checkin", "2018-01-01");
-        innerJson.put(("checkout", "2019-01-01");
+        innerJson.put("checkout", "2019-01-01");
 
         JSONObject body = new JSONObject();
 
