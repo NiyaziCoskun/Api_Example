@@ -20,16 +20,20 @@ public class C04_Put_ResponseBilgileriAssertion {
         reqBody.put("userId", 3);
         reqBody.put("id", 1);
 
-        Response response = given().contentType(ContentType.JSON).when().body(reqBody.toString()).put(url);
+        Response response = given().
+                contentType(ContentType.JSON).
+                when().
+                body(reqBody.toString()).
+                put(url);
         response.prettyPrint();
 
         response.
                 then().
                 assertThat().
                 statusCode(200).
-                contentType("application/json; charset=utf-8")
-                .header("Server", "cloudflare")
-                .statusLine("HTTP/1.1 200 OK");
+                contentType("application/json; charset=utf-8").
+                header("Server", "cloudflare").
+                statusLine("HTTP/1.1 200 OK");
 
 
     }
